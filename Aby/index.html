@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#fff6e7" />
+  <meta name="description" content="Invitación sorpresa para celebrar el cumpleaños de Aby." />
+  <title>Shhh... es una fiesta sorpresa | Aby</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="papel-picado" aria-hidden="true">
+    <span class="papel papel--pink"></span>
+    <span class="papel papel--orange"></span>
+    <span class="papel papel--teal"></span>
+    <span class="papel papel--purple"></span>
+    <span class="papel papel--yellow"></span>
+    <span class="papel papel--pink"></span>
+  </div>
+
+  <div class="petals" aria-hidden="true">
+    <i class="petal p1"></i><i class="petal p2"></i><i class="petal p3"></i>
+    <i class="petal p4"></i><i class="petal p5"></i><i class="petal p6"></i>
+  </div>
+
+  <main>
+    <section class="hero section reveal" id="inicio">
+      <div class="hero__copy">
+        <p class="eyebrow">Una celebración muy especial</p>
+        <h1>
+          <span>Shhh...</span>
+          <strong>es una fiesta sorpresa</strong>
+        </h1>
+
+        <p class="hero__intro">
+          Acompáñanos a celebrar el cumpleaños de
+        </p>
+
+        <div class="name-wrap" aria-label="Abigail, Aby">
+          <span class="name">Abigail</span>
+          <span class="nickname">“Aby”</span>
+        </div>
+
+        <p class="secret-note">🤫 Guarda el secreto para que la sorpresa sea perfecta.</p>
+
+        <div class="hero__actions">
+          <button class="btn btn--primary" id="openRsvp" type="button">
+            <span>💌</span> Confirmar mi asistencia
+          </button>
+          <a class="btn btn--secondary" href="#ubicacion">
+            <span>📍</span> Ver ubicación
+          </a>
+        </div>
+      </div>
+
+      <div class="portrait-wrap" aria-label="Foto de Aby">
+        <div class="flower flower--one" aria-hidden="true">✿</div>
+        <div class="flower flower--two" aria-hidden="true">❀</div>
+        <div class="flower flower--three" aria-hidden="true">✿</div>
+        <div class="portrait-ring">
+          <img src="assets/aby.jpg" alt="Aby sonriendo" />
+        </div>
+        <div class="lele-badge" aria-hidden="true">
+          <div class="lele-ribbons">
+            <span></span><span></span><span></span><span></span><span></span>
+          </div>
+          <div class="lele-face">•ᴗ•</div>
+          <div class="lele-dress"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="details section reveal" aria-labelledby="detalles-title">
+      <div class="section-heading">
+        <p class="eyebrow">Apártalo en tu agenda</p>
+        <h2 id="detalles-title">Los detalles de la sorpresa</h2>
+      </div>
+
+      <div class="details-grid">
+        <article class="detail-card">
+          <div class="detail-icon" aria-hidden="true">🗓️</div>
+          <div>
+            <span class="detail-label">Fecha</span>
+            <strong>Sábado 31 de octubre de 2026</strong>
+          </div>
+        </article>
+
+        <article class="detail-card">
+          <div class="detail-icon" aria-hidden="true">🕒</div>
+          <div>
+            <span class="detail-label">Hora</span>
+            <strong>Por confirmar</strong>
+            <small>La actualizaremos en cuanto quede definida.</small>
+          </div>
+        </article>
+
+        <article class="detail-card">
+          <div class="detail-icon" aria-hidden="true">📍</div>
+          <div>
+            <span class="detail-label">Lugar</span>
+            <strong>De Capulín 235</strong>
+            <small>Rinconada del Álamo, 42184 Privada del Álamo, Hgo.</small>
+          </div>
+        </article>
+      </div>
+
+      <div class="countdown-card" aria-live="polite">
+        <span class="countdown-card__label">Cuenta regresiva</span>
+        <div class="countdown-card__number" id="daysLeft">—</div>
+        <span class="countdown-card__suffix">días para celebrar a Aby 🎉</span>
+      </div>
+    </section>
+
+    <section class="location section reveal" id="ubicacion" aria-labelledby="ubicacion-title">
+      <div class="section-heading">
+        <p class="eyebrow">Para que llegues sin problema</p>
+        <h2 id="ubicacion-title">Ubicación del salón</h2>
+      </div>
+
+      <div class="location-card">
+        <div class="map-frame">
+          <iframe
+            title="Mapa de la ubicación del evento"
+            src="https://www.google.com/maps?q=De%20Capul%C3%ADn%20235%2C%20Rinconada%20del%20%C3%81lamo%2C%2042184%20Privada%20del%20%C3%81lamo%2C%20Hidalgo&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen>
+          </iframe>
+        </div>
+
+        <div class="location-copy">
+          <span class="location-kicker">📍 De Capulín 235</span>
+          <p>
+            Rinconada del Álamo, 42184 Privada del Álamo, Hidalgo.
+          </p>
+          <a class="btn btn--primary btn--full"
+             href="https://maps.app.goo.gl/XvXKvJ6q5sDy312R8"
+             target="_blank"
+             rel="noopener noreferrer">
+            Abrir ubicación exacta en Google Maps
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta section reveal" aria-labelledby="final-title">
+      <div class="final-cta__ornament" aria-hidden="true">✿ ❀ ✿</div>
+      <p class="eyebrow">La sorpresa será mejor contigo</p>
+      <h2 id="final-title">¡No faltes!</h2>
+      <p>
+        Confirma tu asistencia para ayudarnos a organizar todo y recuerda:
+        <strong>¡Aby no debe enterarse!</strong>
+      </p>
+      <button class="btn btn--primary btn--big" id="openRsvpBottom" type="button">
+        Confirmar mi asistencia
+      </button>
+    </section>
+  </main>
+
+  <footer>
+    <span>Hecho con mucho cariño para Aby 💐</span>
+  </footer>
+
+  <div class="modal" id="rsvpModal" aria-hidden="true">
+    <div class="modal__backdrop" data-close-modal></div>
+    <section class="modal__dialog" role="dialog" aria-modal="true" aria-labelledby="rsvpTitle">
+      <button class="modal__close" type="button" data-close-modal aria-label="Cerrar">×</button>
+      <div class="modal__icon" aria-hidden="true">💐</div>
+      <p class="eyebrow">Confirmación de asistencia</p>
+      <h2 id="rsvpTitle">¡Nos dará mucho gusto verte!</h2>
+      <p class="modal__lead">
+        Regálanos tu nombre completo para añadirte a la lista de invitados confirmados.
+      </p>
+
+      <form id="rsvpForm" novalidate>
+        <label for="fullName">Nombre completo</label>
+        <input
+          id="fullName"
+          name="nombre"
+          type="text"
+          autocomplete="name"
+          placeholder="Ej. Zuriel Villegas Anaya"
+          minlength="5"
+          maxlength="90"
+          required
+        />
+
+        <label for="guests">Número de personas</label>
+        <select id="guests" name="personas">
+          <option value="1">1 persona</option>
+          <option value="2">2 personas</option>
+          <option value="3">3 personas</option>
+          <option value="4">4 personas</option>
+          <option value="5">5 personas</option>
+        </select>
+
+        <label for="note">Mensaje para los organizadores <span>(opcional)</span></label>
+        <textarea
+          id="note"
+          name="mensaje"
+          rows="3"
+          maxlength="180"
+          placeholder="Ej. ¡Ahí estaremos!"></textarea>
+
+        <input type="hidden" name="evento" value="Fiesta sorpresa de Aby - 31/10/2026" />
+
+        <button class="btn btn--primary btn--full" type="submit" id="submitRsvp">
+          Sí, confirmo mi asistencia 🎉
+        </button>
+        <p class="form-status" id="formStatus" aria-live="polite"></p>
+      </form>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
