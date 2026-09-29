@@ -1,41 +1,42 @@
 /**
- * Google Apps Script para la invitación de Aby
- * ------------------------------------------------------------
- * 1) Crea un Google Sheet.
- * 2) Ponle, por ejemplo, el nombre: "Confirmaciones fiesta Aby".
- * 3) En ese Sheet abre: Extensiones > Apps Script.
- * 4) Borra el contenido inicial y pega este archivo completo.
- * 5) Guarda.
- * 6) Implementar > Nueva implementación > Aplicación web.
- * 7) Ejecutar como: Yo.
- * 8) Quién tiene acceso: Cualquier persona.
- * 9) Implementar y copiar la URL que termina en /exec.
- * 10) Pega esa URL en GOOGLE_SCRIPT_URL dentro de script.js.
+ * Fiesta sorpresa de Aby — receptor de confirmaciones
+ *
+ * Google Sheet enlazado:
+ * https://docs.google.com/spreadsheets/d/1E_qFTm46HDUrAiQ2DXsO6n03AzPgpT6H7bk5n6Iv8eU/edit
+ *
+ * Hoja destino: Confirmaciones
+ *
+ * IMPORTANTE:
+ * Google exige desplegar este código como "Aplicación web" para obtener
+ * una URL /exec. Después pega esa URL en GOOGLE_SCRIPT_URL de script.js.
  */
 
-function doPost(e) {
-  const sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+const SPREADSHEET_ID = "1E_qFTm46HDUrAiQ2DXsO6n03AzPgpT6H7bk5n6Iv8eU";
+const SHEET_NAME = "Confirmaciones";
 
-  if (sheet.getLastRow() === 0) {
-    sheet.appendRow([
-      "Fecha y hora",
-      "Nombre completo",
-      "Número de personas",
-      "Mensaje",
-      "Evento"
-    ]);
-    sheet.getRange(1, 1, 1, 5).setFontWeight("bold");
-    sheet.setFrozenRows(1);
+function doPost(e) {
+  const spreadsheet = SpreadsheetApp.openById(SPREADSHEET_ID);
+  const sheet = spreadsheet.getSheetByName(SHEET_NAME);
+
+  if (!sheet) {
+    throw new Error('No se encontró la hoja "' + SHEET_NAME + '".');
   }
 
-  const p = e.parameter || {};
+  const p = (e && e.parameter) ? e.parameter : {};
+  const nombre = String(p.nombre || "").trim();
+  const mensaje = String(p.mensaje || "").trim();
+
+  if (!nombre) {
+    return ContentService
+      .createTextOutput(JSON.stringify({ ok: false, error: "Falta el nombre." }))
+      .setMimeType(ContentService.MimeType.JSON);
+  }
 
   sheet.appendRow([
     new Date(),
-    p.nombre || "",
-    p.personas || "1",
-    p.mensaje || "",
-    p.evento || "Fiesta sorpresa de Aby - 31/10/2026"
+    nombre,
+    mensaje,
+    "Confirmada"
   ]);
 
   return ContentService

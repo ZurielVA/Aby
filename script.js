@@ -1,12 +1,15 @@
 // ============================================================
 // INVITACIÓN DE ABY
-// ============================================================
-// Cuando tengas desplegado el Google Apps Script incluido en
-// "google-apps-script.gs", pega aquí la URL que termina en /exec.
-// Mientras esté vacío, el formulario funciona en MODO DEMO.
+// Google Sheet destino:
+// https://docs.google.com/spreadsheets/d/1E_qFTm46HDUrAiQ2DXsO6n03AzPgpT6H7bk5n6Iv8eU/edit
+// Hoja: Confirmaciones
+//
+// ÚLTIMO PASO:
+// Despliega google-apps-script.gs como "Aplicación web" y pega aquí
+// la URL que termina en /exec.
 // ============================================================
 
-const GOOGLE_SCRIPT_URL = "";
+const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwsAWTgpJQeGu94ZMgcy-PaAzAWJsBgJ_e7ZbcdObtpm2H54SX-gUurQE5EuZKLn65m/exec";
 
 const modal = document.getElementById("rsvpModal");
 const openButtons = [

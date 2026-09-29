@@ -133,8 +133,9 @@
         </div>
 
         <div class="location-copy">
-          <span class="location-kicker">📍 De Capulín 235</span>
-          <p>
+          <span class="location-kicker">📍 SALÓN LUZ DE LUNA</span>
+          <p class="location-address">
+            <strong>De Capulín 235</strong><br>
             Rinconada del Álamo, 42184 Privada del Álamo, Hidalgo.
           </p>
           <a class="btn btn--primary btn--full"
@@ -143,6 +144,34 @@
              rel="noopener noreferrer">
             Abrir ubicación exacta en Google Maps
           </a>
+        </div>
+      </div>
+
+      <div class="venue-reference" aria-labelledby="referencias-salon">
+        <div class="venue-reference__heading">
+          <span class="venue-reference__icon" aria-hidden="true">🏠</span>
+          <div>
+            <h3 id="referencias-salon">Así luce el SALÓN LUZ DE LUNA</h3>
+            <p>Estas referencias te ayudarán a identificar el lugar al llegar.</p>
+          </div>
+        </div>
+
+        <div class="venue-gallery">
+          <figure class="venue-photo">
+            <img
+              src="assets/salon-luz-de-luna-frente.png"
+              alt="Vista frontal del Salón Luz de Luna en De Capulín 235"
+              loading="lazy">
+            <figcaption>Vista de frente</figcaption>
+          </figure>
+
+          <figure class="venue-photo">
+            <img
+              src="assets/salon-luz-de-luna-referencia.png"
+              alt="Referencia de la esquina para ubicar el Salón Luz de Luna"
+              loading="lazy">
+            <figcaption>Referencia desde la esquina</figcaption>
+          </figure>
         </div>
       </div>
     </section>
@@ -188,23 +217,13 @@
           maxlength="90"
           required
         />
-
-        <label for="guests">Número de personas</label>
-        <select id="guests" name="personas">
-          <option value="1">1 persona</option>
-          <option value="2">2 personas</option>
-          <option value="3">3 personas</option>
-          <option value="4">4 personas</option>
-          <option value="5">5 personas</option>
-        </select>
-
-        <label for="note">Mensaje para los organizadores <span>(opcional)</span></label>
+<label for="note">Un mensajito para Aby 💖 <span>(opcional)</span></label>
         <textarea
           id="note"
           name="mensaje"
           rows="3"
           maxlength="180"
-          placeholder="Ej. ¡Ahí estaremos!"></textarea>
+          placeholder="Déjale aquí unas palabras bonitas a Aby 💖"></textarea>
 
         <input type="hidden" name="evento" value="Fiesta sorpresa de Aby - 31/10/2026" />
 
